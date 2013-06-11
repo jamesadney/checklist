@@ -1,0 +1,6 @@
+var $task = $('#edit_task_<%= @task.id %>');
+<% if @task.complete? %>
+	$task.appendTo('#complete_tasks');
+<% else %>
+	$task.appendTo('#incomplete_tasks');
+<% end %>
